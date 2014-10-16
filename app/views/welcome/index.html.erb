@@ -1,2 +1,17 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<% t = Time.now + 2700 %>
+
+  <div class = "row">
+    <div id = "logoarea"> Thoughtful food </div>
+  </div>
+
+  <div class="container-fluid">
+
+    <h1>Have delicious food at your door by</h1><div class="timer"><%= t.strftime "%H:%M %P" %></div>
+    <h1>Have your delicious food delivered in</h1><div class="timer"></div><h1>mins</h1>
+    <div class ="buttoncontainer">
+    
+    </div>
+  </div>
+
+  <div class ="footer">
+  </div>
