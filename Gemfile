@@ -47,7 +47,6 @@ group :development do
   # Rails console opens pry
   #> https://github.com/rweng/pry-rails
   gem 'pry-rails'
-  
 end
 
 # Use ActiveModel has_secure_password
