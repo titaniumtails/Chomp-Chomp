@@ -1,0 +1,49 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* 
+
+TO DO: 
+ - For mobile: text align logo for center
+
+*/
+
+@font-face {
+  font-family: "Pacifico";
+  src: url('/assets/fonts/Pacifico.ttf');
+}
+
+body {
+  /*background-image: url('/public/background2.jpg');
+*/ 
+  background-image: url('https://farm6.staticflickr.com/5104/5637026243_6bec317320_o.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: "Avenir Next", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+}
+
+#logoarea {
+  color: rgb(201, 49, 49);
+  font-family: "Pacifico", Helvetica, Arial, sans-serif; 
+  font-size: 2.5em;
+  margin: 0.7em 1.4em;
+  text-shadow: 2px 2px 6px #6f6f6f;
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: 400;
+  text-align: center;
+}
+
+.timer {
+  text-align: center;
+  font-size: 2.8em;
+  font-weight: 600;
+
+}
+/*.container-fluid {
+  color: rgb();
+}
+*/
