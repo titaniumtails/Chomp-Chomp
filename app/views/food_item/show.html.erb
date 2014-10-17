@@ -2,4 +2,20 @@
 <h1>You are lost in a food hole</h1>
 <h2>hello Mr. <%= @id_requested %>. </h2>
 <h2>Welcome to the other side of <%= @id_requested %>.</h2>
+=============
+<h3>
+  You have reached the <strong><%= @myfood.name %></strong>
+  <p> at the great price of <%= @myfood.price %>
+  <p><img class = "img-responsive img-circle" <%= image_tag @myfood.photo_path %>
+  <p><%= @myfood.harrys_choice ? "THUMBS UP" : "THUMBS DOWN" %> 
+  <p>
+
+  <% if @myfood.harrys_choice %>
+    <img class = "img-responsive img-thumbnail" src="http://metrouk2.files.wordpress.com/2011/02/article-1296566313439-024c0bb5000005dc-32670_636x404.jpg" width="30%" />
+  <% else %>  
+    <img class = "img-responsive img-thumbnail" src="http://www.livingdice.com/wp-content/uploads/2008/12/thumbs_down.jpg" width="30%" />
+  <% end %>
+
+</h3>
+
 </center>
