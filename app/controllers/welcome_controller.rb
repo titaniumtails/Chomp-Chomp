@@ -5,9 +5,9 @@ class WelcomeController < ApplicationController
     # @item = FoodItem.all.sample
     # for @item in FoodItem.cuisine
 
-    @westernimg = FoodItem.where(cuisine: "Western").sample
-    @asianimg = FoodItem.where(cuisine: "Asian").sample
-    @advenimg = FoodItem.where(cuisine: "Adventurous").sample
+    @western_food = FoodItem.where(cuisine: "Western").sample
+    @asian_food = FoodItem.where(cuisine: "Asian").sample
+    @adven_food = FoodItem.where(cuisine: "Adventurous").sample
 
 
   end

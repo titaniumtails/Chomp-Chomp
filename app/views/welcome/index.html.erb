@@ -16,18 +16,21 @@
       <div id ="loginform">
       </div>
     </div>
-    <div class ="col-xs-4 randomimg">Hello <%= @westernimg.name %> costs $<%= @westernimg.price %>
-      <img class = "img-responsive img-rounded " <%= image_tag @westernimg.photo_path %>
-      <%= @westernimg.harrys_choice ? "THUMBS UP" : "THUMBS DOWN" %>    
-    </div>
-    <div class ="col-xs-4 randomimg">Hello <%= @asianimg.name %> costs $<%= @asianimg.price %>
-      <img class = "img-responsive img-rounded " <%= image_tag @asianimg.photo_path %>
-      <%= @asianimg.harrys_choice ? "THUMBS UP" : "THUMBS DOWN" %>    
-    </div>
-    <div class = "col-xs-4 randomimg"> Hello <%= @advenimg.name %> costs $<%= @advenimg.price %>
-      <img class = "img-responsive img-rounded " <%= image_tag @advenimg.photo_path %>
-      <%= @advenimg.harrys_choice ? "THUMBS UP" : "THUMBS DOWN" %>    
-    </div>
+    <% [@western_food, @asian_food, @adven_food].each do |food| %>
+      <div class="col-xs-4 randomimg">
+        <p> You're going to love this <%= food.cuisine %> food.
+        
+        <p><a href = "/food_item/show/<%=food.id %>"><%= food.name %></a>
+
+        <%= link_to food.name, {controller: 'food_item', action: 'show', id: food.id}, {class food.name} %> is ready for delivery to your door.
+
+        <p>It comes from <%= food.restaurant_name %> for <%= food.price %>
+        <p><img class = "img-responsive img-rounded " <%= image_tag food.photo_path %>
+        <p>Harry gives it a big <%= food.harrys_choice ? "THUMBS UP" : "THUMBS DOWN" %>
+      </div>
+    <% end %>
+
+    
    
   </div>
 
