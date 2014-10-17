@@ -5,12 +5,30 @@
   </div>
 
   <div class="container-fluid">
-
+    <div id="deliverydescrip">
     <h1>Have delicious food at your door by</h1><div class="timer"><%= t.strftime "%H:%M %P" %></div>
     <h1>Have your delicious food delivered in</h1><div class="timer"></div><h1>mins</h1>
-    <div class ="buttoncontainer">
-    
     </div>
+    <div class ="col-xs-10 col-xs-offset-2 buttoncontainer">
+      <div id ="explorenow">
+        <button type="button" class="btn btn-primary btn-lg btn-success">Explore our Food</button>
+      </div>
+      <div id ="loginform">
+      </div>
+    </div>
+    <div class ="col-xs-4 randomimg">Hello <%= @westernimg.name %> costs $<%= @westernimg.price %>
+      <img class = "img-responsive img-rounded " <%= image_tag @westernimg.photo_path %>
+      <%= @westernimg.harrys_choice ? "THUMBS UP" : "THUMBS DOWN" %>    
+    </div>
+    <div class ="col-xs-4 randomimg">Hello <%= @asianimg.name %> costs $<%= @asianimg.price %>
+      <img class = "img-responsive img-rounded " <%= image_tag @asianimg.photo_path %>
+      <%= @asianimg.harrys_choice ? "THUMBS UP" : "THUMBS DOWN" %>    
+    </div>
+    <div class = "col-xs-4 randomimg"> Hello <%= @advenimg.name %> costs $<%= @advenimg.price %>
+      <img class = "img-responsive img-rounded " <%= image_tag @advenimg.photo_path %>
+      <%= @advenimg.harrys_choice ? "THUMBS UP" : "THUMBS DOWN" %>    
+    </div>
+   
   </div>
 
   <div class ="footer">
