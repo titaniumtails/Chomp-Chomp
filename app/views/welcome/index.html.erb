@@ -22,9 +22,9 @@
         
         <p><a href = "/food_item/show/<%=food.id %>"><%= food.name %></a>
 
-        <%= link_to food.name, {controller: 'food_item', action: 'show', id: food.id}, {class food.name} %> is ready for delivery to your door.
+        <%= link_to food.name, {controller: 'food_item', action: 'show', id: food.id} %> is ready for delivery to your door.
 
-        <p>It comes from <%= food.restaurant_name %> for <%= food.price %>
+        <p>It comes from <%= food.restaurant_name %> for $<%= food.price %>
         <p><img class = "img-responsive img-rounded " <%= image_tag food.photo_path %>
         <p>Harry gives it a big <%= food.harrys_choice ? "THUMBS UP" : "THUMBS DOWN" %>
       </div>
